@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const db = require("./db");
 app.use(express.json());
 
 app.use("/assets", express.static(path.join(__dirname, "assets")));
