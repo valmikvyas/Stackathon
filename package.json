@@ -2,7 +2,7 @@
   "name": "Stackathon",
   "version": "1.0.0",
   "description": "Fullstack Stackathon",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
