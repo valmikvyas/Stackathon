@@ -1,0 +1,22 @@
+{
+  "name": "Valmik Stackathon",
+  "version": "1.0.0",
+  "description": "Valmik Stackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.2.6",
+    "python": "0.0.4",
+    "scrollmagic": "^2.0.7"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
+}
