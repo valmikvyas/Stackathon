@@ -3,7 +3,9 @@ const app = express();
 const path = require("path");
 app.use(express.json());
 
-app.use("/assets", express.static(path.join(__dirname, "assets")));
+app.use("/", express.static(path.join(__dirname, "style.css")));
+
+app.use("/", express.static(path.join(__dirname, "")));
 
 app.get("/", (req, res, next) => {
   res.sendFile(path.join(__dirname, "index.html"));
@@ -24,8 +26,6 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 3000;
 
-db.sync().then(() => {
-  app.listen(port, () => {
-    console.log(`listening on port ${port}`);
-  });
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
 });
