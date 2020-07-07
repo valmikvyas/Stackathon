@@ -200,13 +200,15 @@ const controller = new ScrollMagic.Controller();
 	let obj2 = {curImg: 0};
 
 	// tween images for Video1
-	let videoTween1 = TweenMax.to(obj, 0.5,
+	let videoTween1 = TweenMax.to(obj, 0.1,
 		{
 			curImg: images.length - 1,	// animate propery curImg to number of images
 			roundProps: "curImg",				// only integers so it can be used as an array index
-			repeat: 0,									// repeat 3 times
+      repeat: 0,
+      useFrames: true,
+      smoothChildTiming: true,
 			immediateRender: true,			// load first image automatically
-			ease: Linear.easeNone,			// show every image the same ammount of time
+			ease: Linear.easeInOut,			// show every image the same ammount of time
 			onUpdate: function () {
 			  $("#myimg").attr("src", images[obj.curImg]); // set the image source
 			}
@@ -214,13 +216,15 @@ const controller = new ScrollMagic.Controller();
   );
 
   //tween images for Video2 
-  let videoTween2 = TweenMax.to(obj2, 0.5,
+  let videoTween2 = TweenMax.to(obj2, 0.1,
 		{
 			curImg: images2.length - 1,	// animate propery curImg to number of images
 			roundProps: "curImg",				// only integers so it can be used as an array index
-			repeat: 0,									// repeat 3 times
+      repeat: 0,			
+      useFrames: true,
+      smoothChildTiming: true,						// repeat 3 times
 			immediateRender: true,			// load first image automatically
-			ease: Linear.easeNone,			// show every image the same ammount of time
+			ease: Linear.easeInOut,			// show every image the same ammount of time
 			onUpdate: function () {
 			  $("#myimg2").attr("src", images2[obj2.curImg]); // set the image source
 			}
@@ -429,11 +433,11 @@ let scrollpos2 = scrollpos;
 let delay2 = 0;
 
 scene.on("update", e => {
-  scrollpos = e.scrollPos / 1000;
+  scrollpos = e.scrollPos / 2000;
 });
 
 sceneImgs2.on("update", e => {
-  scrollpos = e.scrollPos / 1000;
+  scrollpos = e.scrollPos / 2000;
 });
 
 // sceneVid2.on("update", e => {
