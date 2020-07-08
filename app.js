@@ -208,7 +208,7 @@ const controller = new ScrollMagic.Controller();
       useFrames: true,
       smoothChildTiming: true,
 			immediateRender: true,			// load first image automatically
-			ease: Linear.easeInOut,			// show every image the same ammount of time
+			ease: Linear.easeNone,			// show every image the same ammount of time
 			onUpdate: function () {
 			  $("#myimg").attr("src", images[obj.curImg]); // set the image source
 			}
@@ -224,7 +224,7 @@ const controller = new ScrollMagic.Controller();
       useFrames: true,
       smoothChildTiming: true,						// repeat 3 times
 			immediateRender: true,			// load first image automatically
-			ease: Linear.easeInOut,			// show every image the same ammount of time
+			ease: Linear.easeNone,			// show every image the same ammount of time
 			onUpdate: function () {
 			  $("#myimg2").attr("src", images2[obj2.curImg]); // set the image source
 			}
